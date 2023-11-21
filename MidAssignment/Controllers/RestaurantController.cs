@@ -32,13 +32,15 @@ namespace MidAssignment.Controllers
                 request = (List<Restaurant>)Session["request"];
             }
 
+            // Get the current time in the desired format (e.g., HH:mm format)
+            string currentTime = DateTime.Now.ToString("HH:mm");
+
             request.Add(new Restaurant()
             {
                 Id = restaurant.Id,
                 Name = restaurant.Name,
-                Time = "10:00AM",
+                Time = currentTime,
                 Location = restaurant.Location,
-                
             });
             db.SaveChanges();
             Session["request"] = request;
