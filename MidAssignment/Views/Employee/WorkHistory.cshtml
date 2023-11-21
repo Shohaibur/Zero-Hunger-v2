@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "WorkHistory";
+    Layout = "~/Views/Shared/Employee.cshtml";
+}
+
+<h2>List of Restaurent</h2>
+<table class="table table-bordered">
+    <tr>
+        <th>Collected Food</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Name</td>
+        </tr>
+    }
+</table>
