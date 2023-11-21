@@ -16,7 +16,7 @@ namespace MidAssignment.EF.Models
         public string Name { get; set; }
         [Required]
         public string Location { get; set; }
-
+        [Required]
         public string Time { get; set; }
 
         public virtual ICollection<RestaurantEmployee> RestaurantEmployees { get; set;}

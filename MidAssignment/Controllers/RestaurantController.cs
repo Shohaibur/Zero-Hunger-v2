@@ -36,7 +36,9 @@ namespace MidAssignment.Controllers
             {
                 Id = restaurant.Id,
                 Name = restaurant.Name,
-                Time="12:30AM",
+                Time = "10:00AM",
+                Location = restaurant.Location,
+                
             });
             db.SaveChanges();
             Session["request"] = request;
